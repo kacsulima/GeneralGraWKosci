@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  background-color: #26282e;
+  color: #209781;
+  font-family: "Lobster", sans-serif;
+  font-size: 28px;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  font-size: 17px;
+}
+
+ul {
+  font-size: 17px;
+}
+
+#pokazZasady,
+#zwinZasady {
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.dodajGracza,
+.usunGracza {
+  background-color: rgb(38, 124, 124);
+  border: none;
+  color: whitesmoke;
+  border-radius: 10px;
+  font-family: "Lobster", sans-serif;
+  padding: 5px;
+}
+
+.nowyGracz {
+  color: whitesmoke;
+  padding: 5px;
+  font-size: 20px;
+}
+
+#pokazZasady:hover,
+#zwinZasady:hover {
+  color: #e9b64a;
+  cursor: pointer;
+}
+
+.zasady {
+  display: none;
+}
+
+.dodawanieGracza {
+  display: inline-block;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.gracz-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px auto;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.nowyGracz {
+  text-align: left;
+  color: #4ae99f;
+  font-weight: bold;
+  font-size: 16px;
+  flex-grow: 1;
+  margin-right: 10px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.usunGracza {
+  width: 100px;
+}
+
+.przycisk {
+  background-color: rgb(38, 124, 124);
+  border: none;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Lobster", sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.przycisk:hover {
+  background-color: rgb(32, 151, 129);
+  color: #e9b64a; 
+  transition: 500ms;
+}
+
+.usunGracza:hover {
+  color: rgb(255, 0, 21);
+  transition: 500ms;
+}
+
+.RozpocznijGrę {
+  width: 150px;
+  font-size: 20px;
+}

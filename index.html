@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gra w kości</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="nagłówek">Gra w kości</h1>
+      
+      <div id="pokazZasady">Aby poznać zasady kliknij tutaj!</div>
+
+      <p class="zasady">
+        Generał to najbardziej znana i rozpowszechniona gra w kości na świecie.
+        Do tej odmiany potrzebujemy pięciu sześciościennych kostek do gry.
+        Rozgrywka trwa 15 kolejek, w których każdy z graczy ma do dyspozycji
+        trzy rzuty kostkami. Po każdym rzucie gracz może zatrzymać dowolną
+        liczbę kostek i rzucić ponownie resztą. Celem gry jest uzyskanie jak
+        największej liczby punktów za określone układy oczek na kostkach.
+        Plansza do gry w Generała składa się z dwóch części: górnej i dolnej. W
+        części górnej wpisujemy liczbę kostek o danej liczbie oczek przemnożoną
+        przez liczbę oczek (np. za trzy czwórki wpisujemy 12 punktów). Za
+        wypełnienie górnej części można otrzymać bonus 35 punktów, jeśli
+        zdobędzie się w niej co najmniej 63 punkty (co odpowiada trzem kostkom
+        każdego rodzaju). W przypadku braku zaliczenia górnej planszy gracz
+        otrzyma -50 punktów. </br> W części dolnej wpisujemy punkty za następujące
+        układy:
+      </p>
+        <ul class="zasady">
+          <li>
+            Para - dowolna para oczek (suma oczek)
+          </li>
+          <li>
+            Dwie pary - dowolne dwie pary oczek (suma oczek)
+          </li>
+          <li>
+            Trójka - dowolna trójka oczek (suma oczek)
+          </li>
+          <li>
+            Kareta - dowolna czwórka oczek (suma oczek)
+          </li>
+          <li>
+            Full - trójka i para oczek (25 punktów)
+          </li>
+          <li>
+            Mały strit - pięć kolejnych oczek od 1 do 5 (30 punktów)
+          </li>
+          <li>
+            Duży strit - pięć kolejnych oczek od 2 do 6 (35 punktów)
+          </li>
+          <li>
+            Poker - pięć takich samych oczek (50 punktów)
+          </li>
+          <li>
+            Szansa - dowolny wynik (suma oczek)
+          </li>
+        </ul>
+      <p class="zasady">
+        Jeżeli dany układ pojawi się przy pierwszy rzucie suma punktów jest
+        mnożona razy dwa. Na przykład, gdy przy pierwszym rzucie wyrzucimy dwie
+        pary składajace się z trójek i czwórek, gracz otrzyma 28 punktów.
+      </p>
+    </header>
+
+    <div class="dodawanieGracza">
+      <input type="text" id="nazwaGracza" placeholder="Wprowadź nazwę gracza">
+      <button type="submit" class="dodajGracza przycisk">Dodaj gracza</button>
+    </div>
+
+
+    <div class="gracze">
+
+    </div>
+
+  </br>
+
+    <div class="start">
+      <button type="submit" class="RozpocznijGrę przycisk">Rozpocznij grę</button>
+    </div>
+
+    <script src="jQuey.js"></script>
+    <script src="gra.js"></script>
+  </body>
+</html>
