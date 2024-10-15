@@ -110,7 +110,7 @@ ul {
 
 .przycisk:hover {
   background-color: rgb(32, 151, 129);
-  color: #e9b64a; 
+  color: #e9b64a;
   transition: 500ms;
 }
 
@@ -122,4 +122,64 @@ ul {
 .RozpocznijGrę {
   width: 150px;
   font-size: 20px;
+}
+
+.ukryte {
+  display: none;
+}
+
+/* Od tego miejsca kodujemy nowy uklad strony podczas gry */
+
+#cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 60vh;
+  box-sizing: border-box;
+}
+
+#nagłówekGry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#nazwaiTuraGracza {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e9b64a;
+  text-align: center;
+}
+
+#karta {
+  position: absolute;
+  right: 20px;
+  background-color: rgb(38, 124, 124);
+  color: whitesmoke;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#karta:hover {
+  background-color: rgb(32, 151, 129);
+}
+
+#kosci {
+  text-align: center;
+  min-height: 300px;
+}
+
+#przyciski {
+  text-align: center;
+}
+
+#cont.ukryte,
+#cont .ukryte {
+  display: none;
 }

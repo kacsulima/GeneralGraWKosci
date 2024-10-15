@@ -116,6 +116,10 @@ document.querySelector(".RozpocznijGrę").addEventListener("click", function () 
   }
 });
 
+let ileGraczy = iloscGraczy;
+let tura = 1;
+let aktualnyGracz = 0;
+
 function rozpocznijRozgrywke() {
   alert("Zaczniemy grę, jak ją okoduję :)");
   document.querySelector(".dodawanieGracza").style.display = "none";
@@ -124,4 +128,34 @@ function rozpocznijRozgrywke() {
   document.getElementById("nagłówek").innerHTML =
     "Generał - najlepsza gra w kości";
   document.getElementById("pokazZasady").style.display = "none";
+  let ukryte = document.querySelectorAll(".ukryte");
+  for (element of ukryte) {
+    element.classList.remove("ukryte");
+    let cont = document.getElementById("cont");
+    if (element != cont) {
+      element.classList.add("gra");
+    } else {
+      element.classList.add("containerGry");
+    }
+  }
+  document.getElementById("zakoncz").classList.add("przycisk");
+  document.getElementById("losowanie").classList.add("przycisk");
+  wyswietlanieTuryNazwyGracza(aktualnyGracz, tura);
 }
+
+function wyswietlanieTuryNazwyGracza(ktoryGracz, ktoraTura) {
+  let gracz = gracze[ktoryGracz];
+  document.getElementById(
+    "nazwaiTuraGracza"
+  ).innerHTML = `${gracz.nazwaGracza} | Tura: ${ktoraTura}`;
+}
+
+document.getElementById("zakoncz").addEventListener("click", function () {
+  if (aktualnyGracz + 1 > gracze.length - 1) {
+    aktualnyGracz = 0;
+    tura++;
+  } else {
+    aktualnyGracz++;
+  }
+  wyswietlanieTuryNazwyGracza(aktualnyGracz, tura);
+});
